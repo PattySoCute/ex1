@@ -1,0 +1,109 @@
+*{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+}
+
+header{
+    height: 95vh;
+    background-image: linear-gradient(to left bottom, hsla(339, 86%, 81%, 0.65), hsla(41, 86%, 77%, 0.65)), url(cat-cute.jpg);
+    background-size: cover;
+    background-position: top; /*ทำให้ภาพขยับตามขนาดหน้าจอ*/
+    position: relative;
+    clip-path: polygon(4% 0, 92% 0, 100% 100%, 0 96%);
+}
+
+.text-box{
+    position: absolute;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+.primary{
+    color: white;
+    text-transform: uppercase; /*ทุกตัวอักษรตัวใหญ่*/
+}
+
+.main{
+    display: block;
+    font-size: 9rem;
+    letter-spacing: 2rem;
+    animation: MoveInLeft;
+    animation-duration: 1.5s;
+}
+
+.sub{
+    display: block;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    animation: MoveInRight;
+    animation-duration: 1.5s;
+}
+
+.btn:link, .btn:visited{
+    margin: 5%;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 500; /*ความหนาตัวอักษร*/
+    position: relative;
+    padding: 1.5rem 3rem; /*ปรับขนาดพื้นหลังปุ่ม*/
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.btn-white{
+    background-color: white;
+    color: gray;
+}
+.btn-white:hover{
+    background-color: #f8a5c2;
+    transition: transform 0.5s;
+}
+.btn-white:active{
+    background-color: #f7d794;
+}
+
+@keyframes MoveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-15rem);
+    }
+    80%{
+        opacity: 0.8;
+        transform: translateX(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes MoveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(15rem);
+    }
+    80%{
+        opacity: 0.8;
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
