@@ -1,5 +1,5 @@
 *{
-    font-size: 62.5%;
+    font-size: 62.5%; /*ปกติ = 16 px -> จะเปลี่ยนเป็น 10 px (10/16)*/
 }
 
 body{
@@ -8,9 +8,9 @@ body{
 }
 
 header{
-    height: 95vh;
+    height: 95vh; /*ความสูงหน้าจอ*/
     background-image: linear-gradient(to left bottom, hsla(342, 100%, 83%, 0.65), hsla(32, 100%, 87%, 0.65)), url(cat-cute.jpg);
-    background-size: cover;
+    background-size: cover; /*ภาพขยายเต็มจอ*/
     background-position: top; /*ทำให้ภาพขยับตามขนาดหน้าจอ*/
     position: relative;
     clip-path: polygon(4% 0, 92% 0, 100% 100%, 0 96%);
@@ -18,11 +18,11 @@ header{
 
 .text-box{
     position: absolute;
-    width: 95%;
+    width: 95%; /*ความกว้าง block*/
     top: 50%;
     left: 50%;
     text-align: center;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); /*ทำให้อยู่ตรงกลางจอจริงๆ*/
 }
 
 .primary{
@@ -31,11 +31,11 @@ header{
 }
 
 .main{
-    display: block; /*เเสดงผลเป็นลักษณะกล่อง เเล้วขึ้นบรรทัดใหม่ */
+    display: block; /*เเสดงผลเป็นลักษณะกล่อง & จะขึ้นบรรทัดใหม่เมื่อความกว้างของ block ไม่พอ*/
     font-size: 9rem;
-    letter-spacing: 2rem;
+    letter-spacing: 2rem; /*ระยะห่างระหว่างตัวอักษร*/
     animation: MoveInLeft;
-    animation-duration: 1.5s;
+    animation-duration: 1.5s; /*animation จะเกิดภายในระยะเวลา 1.5s*/
 }
 
 .sub{
@@ -49,8 +49,8 @@ header{
 .btn:link, .btn:visited{
     margin: 5%;
     text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block; /*เรียงกันแนวนอนและมีพื้นที่ด้านใน ตามที่เรากำหนด */
+    text-decoration: none; /*ไม่เอาขีดเส้นใต้*/
+    display: inline-block; /*เรียงกันเป็นแนวนอน & มีพื้นที่ด้านในตามที่เรากำหนด*/
     border-radius: 5rem;
     font-size: 1.5rem;
     font-weight: 500; /*ความหนาตัวอักษร*/
@@ -59,7 +59,7 @@ header{
 }
 .btn:hover{
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); /*เงา*/
 }
 .btn:active{
     transform: translateY(-1px);
@@ -72,7 +72,7 @@ header{
 }
 .btn-white:hover{
     background-color: #f8a5c2;
-    transition: transform 0.5s;
+    transition: transform 0.4s; /*เมื่อเมาส์ hover ปุ่มจะขยับขึ้นภายในเวลา 0.4s*/
 }
 .btn-white:active{
     background-color: #f7d794;
@@ -80,8 +80,8 @@ header{
 
 @keyframes MoveInLeft{
     0%{
-        opacity: 0;
-        transform: translateX(-15rem);
+        opacity: 0; /*ความโปร่งใส*/
+        transform: translateX(-15rem); /*ตำเเหน่ง text*/
     }
     80%{
         opacity: 0.8;
@@ -158,7 +158,7 @@ header{
 /* กากาบาท */
 
 .navigation__checkbox:checked + .navigation__button .navigation__icon{
-    background-color: transparent;
+    background-color: transparent; /*เส้นกลางหาย*/
 }
 
 .navigation__checkbox:checked + .navigation__button .navigation__icon::before{
@@ -177,6 +177,8 @@ header{
     display: none;
 }
 
+/* วงกลมสีที่ซ้อนอยู่ข้างหลัง */
+
 .navigation__background{
     height: 4rem;
     width: 4rem;
@@ -184,10 +186,12 @@ header{
     top: 5rem;
     right: 16rem;
     z-index: 3;
-    background-image: radial-gradient(#FFB6B9, #FAE3D9);
+    background-image: radial-gradient(#FFB6B9, #FAE3D9); /*ไล่สีเเบบรัศมี*/
     border-radius: 50%;
-    transition: transform 1.5s cubic-bezier(0.075, 0.2, 0.065, 1);
+    transition: transform 1.2s cubic-bezier(0.075, 0.2, 0.065, 1);
 }
+
+/* เลือกทุก .navigation__background ที่นำหน้าด้วย .navigation__checkbox */
 
 .navigation__checkbox:checked ~ .navigation__background{
     transform: scale(100);
@@ -199,7 +203,7 @@ header{
     top: 0;
     left: 0;
     z-index: 4;
-    opacity: 0; /*ความโปร่งใส */
+    opacity: 0; /*ความโปร่งใส*/
     width: 0;
     transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -226,7 +230,7 @@ header{
     color: gray;
     text-decoration: none;
     text-transform: uppercase;
-    background-image: linear-gradient(120deg, #FFFDF6 0%, transparent 50%, gray 50%);
+    background-image: linear-gradient(120deg, #FFFDF6 0%, transparent 50%, gray 50%); /*ไล่สีเเบบเส้นตรง*/
     background-position: 0%;
     background-size: 300%;
     transition: all 0.5s;

@@ -12,9 +12,16 @@
 </head>
 <body>
     <div class="navigation">
+        <!-- input จะช่วย link เมนูเข้ากับ Obj อื่นๆของตัว elements ในเว็บได้ -->
+        <!-- เชื่อม input กับอีกส่วนนึง จะใช้คู่กับ label -->
+        <!-- เชื่อม input เข้ากับ label ด้วย id -->
+        <!-- สร้าง checkbox เพื่อให้เปิดปิดเมนู -->
         <input type="checkbox" class="navigation__checkbox" id="navigation--toggle">
+        <!-- เชื่อม label เข้ากับ input ด้วย for -->
+        <!-- การจะสร้าง label รูปเเบบอะไรก็เเล้วเเต่ ผลจากการทำงานจะเชื่อมกับ input เสมอ! -->
         <label for="navigation--toggle" class="navigation__button">
             <span class="navigation__icon">&nbsp;</span>
+            <!-- การสร้างขีด คือ การสร้างช่องว่างที่มีสีพื้นหลัง -->
         </label>
 
         <div class="navigation__background">&nbsp;</div>
@@ -31,6 +38,7 @@
     <header>
         <div class="text-box">
             <h1 class="primary">
+                <!-- span ช่วยในการกำหนดคุณสมบัติที่เเตกต่างกันของ text ที่อยู่ผสมกับ text อื่นได้ง่ายขึ้น -->
                 <span class="main">CSS227</span>
                 <span class="sub">Your web journey start here</span>
             
