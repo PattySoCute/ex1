@@ -31,7 +31,7 @@ header{
 }
 
 .main{
-    display: block;
+    display: block; /*เเสดงผลเป็นลักษณะกล่อง เเล้วขึ้นบรรทัดใหม่ */
     font-size: 9rem;
     letter-spacing: 2rem;
     animation: MoveInLeft;
@@ -50,7 +50,7 @@ header{
     margin: 5%;
     text-transform: uppercase;
     text-decoration: none;
-    display: inline-block;
+    display: inline-block; /*เรียงกันแนวนอนและมีพื้นที่ด้านใน ตามที่เรากำหนด */
     border-radius: 5rem;
     font-size: 1.5rem;
     font-weight: 500; /*ความหนาตัวอักษร*/
